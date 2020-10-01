@@ -18,6 +18,8 @@ io.on('connection', (socket) => {
      const { error, user } = addUser({ id: socket.id, name, room });
 
      if(error) return callback(error)
+
+     socket.join(user.room);
  })
 
  socket.on('disconnect', () => {
