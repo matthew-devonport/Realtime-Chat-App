@@ -32,9 +32,9 @@ const Chat = ({ location }) => {
 
     useEffect(() => {
         socket.on('message', (message) => {
-
+         setMessages([...messages, message])
         })
-    })
+    }, [messages])
 
     return (
         <h1>Chat</h1>
