@@ -32,12 +32,16 @@ const Chat = ({ location }) => {
 
     useEffect(() => {
         socket.on('message', (message) => {
-         setMessages([...messages, message])
+            setMessages([...messages, message])
         })
     }, [messages])
 
     return (
-        <h1>Chat</h1>
+        <div className="outerContainer">
+            <div className="container">
+                <input value={message} onChange={(event) => setMessage(event.target.value)} />
+            </div>
+        </div>
     )
 }
 
