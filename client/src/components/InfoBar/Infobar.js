@@ -1,8 +1,17 @@
 import React from 'react';
 
-import './Infobar.css'
+import './InfoBar.css'
 
 const Infobar = () => {
+    <div className="infoBar">
+        <div className="leftInnerContainer">
+
+        </div>
+        <div className="rightInnerContainer">
+
+        </div>
+
+    </div>
 
 }
 
