@@ -6,7 +6,6 @@ import Infobar from '../InfoBar/InfoBar';
 
 import './Chat.css';
 
-
 let socket;
 
 const Chat = ({ location }) => {
@@ -54,7 +53,7 @@ const Chat = ({ location }) => {
     return (
         <div className="outerContainer">
             <div className="container">
-                <Infobar />
+                <Infobar room={room} />
                 <input
                  value={message}
                 onChange={(event) => setMessage(event.target.value)} 
