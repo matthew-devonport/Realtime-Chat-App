@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Message.css'
 
-const Message = ({ message: {user, text}, name }) => {
+const Message = ({ message: { user, text }, name }) => {
     let isSentByCurrentUser = false;
 
     const trimmedName = name.trim().toLowerCase();
@@ -14,17 +14,22 @@ const Message = ({ message: {user, text}, name }) => {
     return (
         isSentByCurrentUser
             ? (
-                <div className="messageContainer">
-                    <p className="sentText">{trimmedName}</p>
-                    <div className="messageBox"></div>
-                    <p className="messageText">{text}</p>
+                <div className="messageContainer justifyEnd">
+                    <p className="sentText pr-10">{trimmedName}</p>
+                    <div className="messageBox backgroundBlue"></div>
+                    <p className="messageText colorwhite">{text}</p>
                 </div>
             )
             : (
-       <div>
-           {/*  */}
-       </div>
-      )
+                <div>
+                    <div className="messageContainer justifyStart">
+                        <div className="messageBox backgroundLight"></div>
+                        <p className="messageText colorDark">{text}</p>
+                    </div>
+                    
+                    <p className="sentText pl-10">{user}</p>
+                </div>
+            )
     )
 
 }
